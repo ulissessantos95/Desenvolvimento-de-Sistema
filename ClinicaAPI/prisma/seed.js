@@ -15,9 +15,9 @@ async function main() {
 
     await prisma.paciente.create({
         data: {
-            nome: "Joao",
+            nome: "Roberto Rivelino",
             sexo: "Masculino",
-            data_nascimento: new Date("1980-12-11"),
+            data_nascimento: new Date("1973-09-16"),
             cpf: "958.521.251-65",
             telefone: 99525562,
             email: "joao@gmail.com",
