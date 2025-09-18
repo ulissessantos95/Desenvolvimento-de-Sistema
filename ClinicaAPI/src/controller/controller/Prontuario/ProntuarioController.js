@@ -2,10 +2,15 @@ import { prismaClient } from "../../../prisma/prisma.js";
 
 class ProntuarioController {
     constructor() { }
-    async getTodosOsProntuarios(_, res) {
-
+    async getTodosOsProntuarios(req, res) {
+        const { page, limit } = req.params
+        const pageNumber = Number(page)
+        const limitNumber = Number(limit)
         try{
-            const [prontuario] = await prismaClient.prontuario.findMany();
+            const [prontuario] = await prismaClient.prontuario.findMany({
+                skip: (pageNumber -1) * limit,
+                take: limitNumber,
+            });
             return res.json(prontuario)
         }catch (e){
             console.log(e)
