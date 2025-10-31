@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer components {
+    .card{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 3px 3px 5px #ddd;
+        background-color: #f5feff;
+        width: 300px;
+        height: 320px;
+        padding: 10px;
+        gap: 5px;
+    }
+
+    .titulo{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .views{
+        text-align: center;
+        font-weight: 500;
+        background-color: rgb(183, 255, 231);
+        border-radius: 1px;
+        margin-top: 15px;
+        width: 10%;
+    }
+}
